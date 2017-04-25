@@ -19,10 +19,15 @@ def post_dictionary_guess(guess,which):
     rsp=urllib2.urlopen(req)
     #print rsp.code
 
-    return rsp.read()
+    print rsp.read()
 
 
 
 
 
 def correctPadding(guess,which):
+    response = post_dictionary_guess(guess,which)
+    if len(response)==355:
+        return False
+    else:
+        return True
