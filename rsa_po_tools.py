@@ -19,7 +19,7 @@ def post_dictionary_guess(guess,which):
     rsp=urllib2.urlopen(req)
     #print rsp.code
 
-    print rsp.read()
+    return rsp.read()
 
 
 
@@ -31,3 +31,5 @@ def correctPadding(guess,which):
         return False
     else:
         return True
+#smallCiphertext = '5011ee363939c57ef857f85330db2a796b620145cbdaf20abb10c941436c421d'
+#correctPadding(smallCiphertext,'small')
