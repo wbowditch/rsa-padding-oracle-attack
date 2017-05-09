@@ -175,7 +175,7 @@ def rsa_genkeys(bits, e):
 
 def padding_oracle(k, privkey, c):
     m = rsaDecrypt(c, *privkey)
-    m = '\x00' * (k - len(m)) + m #I2OSP
+    m = '\x00' * (k - len(m)) + m 
     return m[:2] == '\x00\x02'
 
 
